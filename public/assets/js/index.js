@@ -22,6 +22,16 @@ const hide = (elem) => {
   elem.style.display = 'none';
 };
 
+// Arrow Move
+const move = (elem) => {
+  elem.style.left = '92.5%';
+};
+
+// Arrow Move Back
+const move2 = (elem) => {
+  elem.style.left = '88%';
+};
+
 // activeNote is used to keep track of the note in the textarea
 let activeNote = {};
 
@@ -52,13 +62,22 @@ const deleteNote = (id) =>
 
 const renderActiveNote = () => {
   hide(saveNoteBtn);
+  let helper = document.getElementById("helper");
+  let helper2= document.getElementById("helper2");
+  let arrow= document.getElementById("arrow");
 
   if (activeNote.id) {
+    hide(helper);
+    show(helper2);
+    move(arrow);
     noteTitle.setAttribute('readonly', true);
     noteText.setAttribute('readonly', true);
     noteTitle.value = activeNote.title;
-    noteText.value = activeNote.title;
+    noteText.value = activeNote.text;
   } else {
+    hide(helper2);
+    show(helper);
+    move2(arrow)
     noteTitle.removeAttribute('readonly');
     noteText.removeAttribute('readonly');
     noteTitle.value = '';
@@ -112,7 +131,7 @@ const handleNewNoteView = (e) => {
 };
 
 const handleRenderSaveBtn = () => {
-  if (!noteTitle.value.trim() || !noteText.value.trim()) {
+  if (!noteTitle.value.trim() && !noteText.value.trim()) {
     hide(saveNoteBtn);
   } else {
     show(saveNoteBtn);

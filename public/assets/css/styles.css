@@ -3,6 +3,45 @@ html, body {
   margin: 0;
   padding: 0;
 }
+.fa-rotate--45 {
+  margin-left:15vw;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.help{
+  position: absolute;
+  font-size: 120%;
+  top: 15%;
+  left: 72.5%;
+  width:100%;
+}
+
+.help2{
+  display:none;
+  position: absolute;
+  font-size: 120%;
+  top: 15%;
+  left: 62.5%;
+  width:100%;
+}
+
+.arrow{
+  position:absolute;
+  top:4%;
+  left:88%;
+}
+
+nav {
+  margin-bottom: 1.5vh;
+}
+
+.navbar-brand{
+  font-size:42px;
+}
 
 .save-note {
   display: none;
