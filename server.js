@@ -52,4 +52,4 @@ app.delete('/api/notes/:id', (req, res) => {
 });
 
 // Listen to Specified Port
-app.listen(PORT, () => console.log(`App listening on PORT ${PORT}`));
+app.listen(process.env.PORT || PORT, () => console.log(`App listening on PORT ${PORT}`));
