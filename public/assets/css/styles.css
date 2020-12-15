@@ -11,28 +11,27 @@ html, body {
   -o-transform: rotate(-45deg);
   transform: rotate(-45deg);
 }
-
-.help{
+.helperCon{
   position: absolute;
-  font-size: 120%;
-  top: 15%;
-  left: 72.5%;
-  width:100%;
+  top: 11vh;
+  left:60vw;
+  
+}
+.help{
+  font-size: 70%;
+  color:white;
 }
 
 .help2{
   display:none;
-  position: absolute;
-  font-size: 120%;
-  top: 15%;
-  left: 62.5%;
-  width:100%;
+  font-size: 70%;
+  color:white;
 }
 
 .arrow{
   position:absolute;
-  top:4%;
-  left:88%;
+  top: 5.5vh;
+  left:80vw;
 }
 
 nav {
@@ -40,8 +39,9 @@ nav {
 }
 
 .navbar-brand{
-  font-size:42px;
+  font-size:45px;
 }
+
 
 .save-note {
   display: none;
@@ -50,7 +50,7 @@ nav {
 .icons i {
 
   margin-left: 15px;
-  margin-right: 15px;
+  margin-right: 5vw;
   font-size: 1.5rem;
   cursor: pointer;
 }
@@ -66,6 +66,13 @@ nav {
   resize: none;
   height: calc(100% - 63px);
   padding-top: 15px;
+}
+/* Update Note */
+.update-note {
+  position:absolute;
+  bottom:40vh;
+  left:50vw;
+  color:black;
 }
 
 .note-title {

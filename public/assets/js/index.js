@@ -24,13 +24,15 @@ const hide = (elem) => {
 
 // Arrow Move
 const move = (elem) => {
-  elem.style.left = '92.5%';
+  elem.style.left = '83vw';
 };
 
 // Arrow Move Back
 const move2 = (elem) => {
-  elem.style.left = '88%';
+  elem.style.left = '76vw';
 };
+
+
 
 // activeNote is used to keep track of the note in the textarea
 let activeNote = {};
@@ -199,6 +201,7 @@ if (window.location.pathname === '/notes') {
   newNoteBtn.addEventListener('click', handleNewNoteView);
   noteTitle.addEventListener('keyup', handleRenderSaveBtn);
   noteText.addEventListener('keyup', handleRenderSaveBtn);
+
 }
 
 getAndRenderNotes();

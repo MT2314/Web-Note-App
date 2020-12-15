@@ -1,26 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8">
+  
+  <head>
+    <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Note Taker</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.1.3/flatly/bootstrap.min.css" />
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
     integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-  <link rel="stylesheet" href="assets/css/styles.css">
-</head>
-
-<body>
-  <nav class="navbar navbar-dark bg-dark">
-    <a class="navbar-brand" href="/">Note Taker
-    </a>
+    <link rel="stylesheet" href="assets/css/styles.css">
+  </head>
+  
+  <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-dark bg-dark">
+      <a class="navbar-brand" href="/">Note Taker
+      </a>
+      <!-- Helper Tips -->
+      <div class = "helperCon">
+        <div class="help" id="helper">
+          <p>Note Title and Note Text need to be filled to Save!</p>
+        </div>
+        <div class="help2" id="helper2">
+          <p>Note View is Read-Only. Click on the Pen icon to create a new Note!</p>
+        </div>
+      </div>
+      <!-- Helper Arrow -->
+        <div class="arrow" id="arrow">
+          <i class="fas fa-arrow-right text-light fa-2x"></i>
+        </div>
+      <!-- Buttons  -->
     <div class="icons">
       <i class="fas fa-save text-light save-note fa-lg"></i>
       <i class="fas fa-pen text-light new-note fa-lg"></i>
     </div>
   </nav>
+
+  <!-- Saved Notes and Notepad-->
   <div class="container-fluid">
     <div class="row">
       <div class="col-4 list-container">
@@ -29,23 +46,20 @@
           </ul>
         </div>
       </div>
+      <!-- NotePad -->
       <div class="col-8">
         <input class="note-title" placeholder="Note Title" maxlength="28" type="text">
         <textarea class="note-textarea" placeholder="Note Text"></textarea>
+        <!-- Update Button -->
+        <div class="update-note">
+          <i class="fa fa-wrench fa-2x"></i>
+          <p class ="update-tip">Click to modify saved note</p>
+        </div>
       </div>
-    </div>    
+    </div>
   </div>
-  <div class = "help" id = "helper">
-    <p>Note Title and Note Text need to be filled to Save!</p>
-  </div>
-  <div class = "help2" id = "helper2">
-    <p>Note View is Read-Only. Click on the Pen icon to create a new Note!</p>
-  </div>
-  
-  <div class = "arrow" id = "arrow">
-    <i class="fas fa-arrow-right fa-3x"></i>
-  </div>
-  
+
+
   <script src="/assets/js/index.js"></script>
 </body>
 
